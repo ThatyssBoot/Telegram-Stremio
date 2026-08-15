@@ -18,7 +18,6 @@ class Telegram:
     API_ID              = _int_env("API_ID")
     API_HASH            = getenv("API_HASH", "")
     BOT_TOKEN           = getenv("BOT_TOKEN", "")
-    USER_SESSION_STRING = getenv("USER_SESSION_STRING", "")
 
     #----- Required: Database URIs
     DATABASE = [db.strip() for db in (getenv("DATABASE") or "").split(",") if db.strip()]
@@ -32,6 +31,7 @@ class Telegram:
     HIDE_CATALOG                  = getenv("HIDE_CATALOG", "false").lower() == "true"
     AUTH_CHANNEL                  = [c.strip() for c in (getenv("AUTH_CHANNEL") or "").split(",") if c.strip()]
     TMDB_API                      = getenv("TMDB_API", "")
+    TVDB_API                       = getenv("TVDB_API", "")
     BASE_URL                      = getenv("BASE_URL", "").rstrip("/")
     UPSTREAM_REPO                 = getenv("UPSTREAM_REPO", "")
     UPSTREAM_BRANCH               = getenv("UPSTREAM_BRANCH", "")
